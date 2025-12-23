@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!-- 核心：适配微信内置浏览器，禁止缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>文章分类导航</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- 引入 LeanCloud Web SDK（CDN 方式，无需本地下载） -->
+  <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.15.0/dist/av-min.js"></script>
+</head>
+<body>
+  <!-- 分类标签栏 -->
+  <div class="category-bar">
+    <div class="category-item active" data-category="技术干货">技术干货</div>
+    <div class="category-item" data-category="行业资讯">行业资讯</div>
+    <div class="category-item" data-category="生活随笔">生活随笔</div>
+  </div>
+
+  <!-- 加载中提示 -->
+  <div class="loading" id="loading">
+    <p>正在加载文章...</p>
+  </div>
+
+  <!-- 文章列表容器 -->
+  <div class="article-list" id="articleList"></div>
+
+  <!-- 空数据提示 -->
+  <div class="empty" id="empty" style="display: none;">
+    暂无该分类下的文章
+  </div>
+
+  <!-- 引入交互脚本 -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
