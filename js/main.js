@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ========== 2. 全局变量定义 ==========
   const categoryItems = document.querySelectorAll('.category-item'); // 分类标签
   const loading = document.getElementById('loading'); // 加载提示
-  const articleList = document.getElementById('List'); // 文章列表容器
+  const articleList = document.getElementById('articleList'); // 文章列表容器
   const empty = document.getElementById('empty'); // 空数据提示
   let activeCategory = 'System Development'; // 默认选中分类
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     empty.style.display = 'none';
 
     // 构建 LeanDB 查询条件
-    const query = new AV.Query('Article');
+    const query = new AV.Query('List');
     query.equalTo('category', category); // 按分类筛选
     query.descending('createTime'); // 按发布时间倒序
 
